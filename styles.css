@@ -1,0 +1,1055 @@
+/* --- Global Resets --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif; /* Replace with your brand font if needed */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* --- Top Header --- */
+.top-header {
+  background-color: #ffffff;
+  padding: 15px 20px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* Very subtle shadow to separate from the hero */
+  position: relative;
+  z-index: 10;
+}
+
+.logo-container img {
+  max-height: 60px; 
+  width: auto;
+}
+
+/* --- Hero Section --- */
+.hero-section {
+  position: relative;
+  width: 100%;
+  padding: 100px 20px 120px; /* Provides the vertical spacing seen in the image */
+  /* Replace with the actual brown roof background image path */
+  background-image: url('images/banner-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.65); /* Dark tint to mimic the screenshot */
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 800px;
+  width: 100%;
+}
+
+/* --- Typography & Copy --- */
+.hero-headline {
+  color: #ffffff;
+  font-size: 2.6rem;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 30px;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+}
+
+.hero-subtext {
+  color: #ffffff;
+  font-size: 0.9rem;
+  margin-top: 15px;
+}
+
+.hero-subtext strong {
+  font-weight: 700;
+}
+
+/* --- Call to Action Button --- */
+.cta-button {
+  background-color: #c41e2a; /* Deep red color from the screenshot */
+  color: #ffffff;
+  font-size: 1.3rem;
+  font-weight: 700;
+  padding: 18px 50px;
+  border: 1px solid #a31822; /* Slight darker border to match the design */
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.cta-button:hover {
+  background-color: #a31822;
+}
+
+.cta-button:active {
+  transform: translateY(2px);
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 768px) {
+  .hero-headline {
+    font-size: 1.8rem;
+  }
+  
+  .hero-section {
+    padding: 70px 20px 90px;
+  }
+  
+  .cta-button {
+    font-size: 1.1rem;
+    padding: 15px 30px;
+    width: 100%;
+    max-width: 400px;
+  }
+}
+/* --- How It Works Section --- */
+.how-it-works-section {
+  padding: 80px 20px;
+  background-color: #ffffff;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #111111;
+  margin-bottom: 40px;
+  letter-spacing: -0.5px;
+}
+
+/* --- Grid Layout for Steps --- */
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 50px;
+}
+
+/* --- Card Styling --- */
+.step-card {
+  background: linear-gradient(to bottom, #222222, #3a3a3a); /* Dark gradient from the image */
+  padding: 40px 20px 30px;
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #ffffff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.step-icon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 25px;
+}
+
+.step-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.step-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 20px;
+}
+
+.step-desc {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #eaeaea; /* Slightly off-white for better readability */
+}
+
+.step-desc strong {
+  color: #ffffff;
+}
+
+/* --- CTA Container --- */
+.cta-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.cta-subtext {
+  font-size: 0.9rem;
+  color: #444444;
+  margin-top: 15px;
+}
+
+/* --- Mobile & Tablet Responsiveness --- */
+@media (max-width: 992px) {
+  /* On tablets, switch to a 2x2 grid */
+  .steps-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  /* On phones, stack everything vertically */
+  .steps-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+  }
+}
+/* --- Cut Out the Middleman Section --- */
+.middleman-section {
+  position: relative;
+  width: 100%;
+  padding: 80px 20px;
+  /* Replace with the dark stacked roofing materials background image */
+  background-image: url('images/bg-middle.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.middleman-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75); /* Heavy dark overlay */
+  z-index: 1;
+}
+
+.middleman-content-wrapper {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1000px;
+  width: 100%;
+  gap: 50px;
+}
+
+/* --- Left Column: Image --- */
+.middleman-image-col {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.middleman-img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Adds a bit of depth to separate from background */
+  border-radius: 2px;
+}
+
+/* --- Right Column: Text --- */
+.middleman-text-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Left-align the content */
+  text-align: left;
+}
+
+.middleman-title {
+  color: #ffffff;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+  line-height: 1.2;
+}
+
+.middleman-subtitle {
+  color: #ffffff;
+  font-size: 1.3rem;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.middleman-desc {
+  color: #dddddd; /* Slightly off-white for body copy readability */
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+/* Modified CTA Button for this specific section */
+.middleman-btn {
+  padding: 15px 45px; 
+  font-size: 1.2rem;
+  width: auto; 
+  align-self: flex-start; /* Keeps the button left-aligned with the text */
+}
+
+/* --- Mobile & Tablet Responsiveness --- */
+@media (max-width: 850px) {
+  .middleman-content-wrapper {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+  
+  .middleman-image-col {
+    justify-content: center;
+  }
+
+  .middleman-text-col {
+    align-items: center;
+    text-align: center;
+  }
+  
+  .middleman-btn {
+    align-self: center; /* Center the button on mobile devices */
+  }
+}
+/* --- Next-Generation Roofing Section --- */
+.next-gen-section {
+  padding: 80px 20px;
+  background-color: #ffffff;
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center; /* Centers the main title and bottom diagram */
+}
+
+/* --- Top Flex Container --- */
+.next-gen-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  margin-bottom: 60px;
+  text-align: left; /* Resets text alignment for the paragraph */
+}
+
+.next-gen-text {
+  flex: 1;
+}
+
+.next-gen-text p {
+  font-size: 1rem;
+  color: #444444;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.next-gen-text strong {
+  color: #111111;
+  font-weight: 700;
+}
+
+/* Custom Bulleted List with Embedded Red Checkmarks */
+.next-gen-benefits {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.next-gen-benefits li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 12px;
+  font-size: 0.95rem;
+  color: #333333;
+}
+
+.next-gen-benefits li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 18px;
+  height: 18px;
+  /* Embedded Solid Red Circle Checkmark SVG */
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23c41e2a'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* Right Side Image */
+.next-gen-image {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.next-gen-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Bottom Diagram Container --- */
+.next-gen-diagram {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.next-gen-diagram img {
+  width: 100%;
+  max-width: 800px; /* Constrains the diagram so it doesn't get massively blown up on ultrawide monitors */
+  height: auto;
+  display: block;
+}
+
+/* --- Mobile & Tablet Responsiveness --- */
+@media (max-width: 900px) {
+  .next-gen-top {
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  .next-gen-image {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .next-gen-section {
+    padding: 60px 20px;
+  }
+}
+/* --- Energy Savings Section --- */
+.energy-section {
+  position: relative;
+  width: 100%;
+  padding: 80px 20px;
+  /* Replace with the background image showing the dark house exterior */
+  background-image: url('images/bg-footer.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.energy-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75); /* Heavy dark overlay for high contrast */
+  z-index: 1;
+}
+
+.energy-content-wrapper {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1000px;
+  width: 100%;
+  gap: 50px;
+}
+
+/* --- Left Column: Image --- */
+.energy-image-col {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.energy-img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6); /* Adds depth */
+  border-radius: 2px;
+}
+
+/* --- Right Column: Text --- */
+.energy-text-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center-aligns the flex items (title, desc, button) */
+  text-align: center; /* Center-aligns the actual text lines */
+}
+
+.energy-title {
+  color: #ffffff;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+
+.energy-subtitle {
+  color: #ffffff;
+  font-size: 1.3rem;
+  font-weight: 400;
+  margin-bottom: 25px;
+  line-height: 1.3;
+}
+
+.energy-desc {
+  color: #dddddd; /* Slightly off-white for body copy */
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  max-width: 420px; /* Constrains width so the paragraph stacks nicely like in the design */
+}
+
+/* Sizing the button specifically for this layout */
+.energy-btn {
+  padding: 15px 50px; 
+  font-size: 1.2rem;
+  width: auto; 
+}
+
+/* --- Mobile & Tablet Responsiveness --- */
+@media (max-width: 850px) {
+  .energy-content-wrapper {
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  .energy-image-col {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .energy-title {
+    font-size: 1.8rem;
+  }
+  
+  .energy-subtitle {
+    font-size: 1.1rem;
+  }
+}
+/* --- Testimonials & Video Section --- */
+.testimonials-section {
+  padding: 80px 20px;
+  background-color: #ffffff;
+  text-align: center;
+  max-width: 900px; /* Keeps the text lines constrained to match the design */
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Stars Styling */
+.five-stars {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  margin-bottom: 15px;
+}
+
+.five-stars svg {
+  width: 28px;
+  height: 28px;
+  fill: #c41e2a; /* Red brand color */
+}
+
+/* Subtitle Styling */
+.testimonials-subtitle {
+  font-size: 1.1rem;
+  color: #444444;
+  line-height: 1.5;
+  margin-bottom: 40px;
+}
+
+/* Video Wrapper */
+.video-wrapper {
+  width: 100%;
+  max-width: 800px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  margin-bottom: 40px;
+  background-color: #000;
+  /* To make this a responsive iframe container later, you can use aspect-ratio: 16/9 */
+}
+
+.video-placeholder {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Ratings Row */
+.ratings-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 700px;
+  margin-bottom: 50px;
+}
+
+.rating-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-right: 1px solid #e0e0e0; /* Faint vertical divider line */
+  padding: 0 10px;
+}
+
+/* Remove the border from the very last item */
+.rating-item:last-child {
+  border-right: none;
+}
+
+.rating-label {
+  font-size: 0.75rem;
+  color: #666666;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+.rating-score {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #c41e2a;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.rating-logo {
+  max-height: 25px;
+  width: auto;
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 768px) {
+  .testimonials-subtitle {
+    font-size: 1rem;
+  }
+  
+  .ratings-row {
+    flex-wrap: wrap; /* Allows items to wrap to a new line */
+    gap: 30px 0;
+  }
+  
+  .rating-item {
+    flex: 0 0 50%; /* Forces a 2x2 grid on mobile */
+    border-right: none; /* Removes the vertical dividers for stacked layout */
+  }
+}
+/* --- Review Cards Section --- */
+.review-cards-section {
+  position: relative;
+  width: 100%;
+  padding: 80px 20px;
+  /* Replace with your actual customer collage background image */
+  background-image: url('images/footer-bg.jpg');
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.review-cards-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* Slight darkening for contrast */
+  z-index: 1;
+}
+
+.review-cards-container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  max-width: 1100px;
+  width: 100%;
+}
+
+/* --- Card Styling --- */
+.review-card {
+  background-color: #ffffff;
+  flex: 1;
+  padding: 35px 25px;
+  border-radius: 2px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* Ensure the stars reuse the layout but size correctly for the cards */
+.review-card .five-stars {
+  margin-bottom: 20px;
+}
+
+.review-card .five-stars svg {
+  width: 20px;
+  height: 20px;
+}
+
+.review-text {
+  font-size: 0.95rem;
+  color: #333333;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  flex-grow: 1; /* Pushes the author name to the bottom if cards are different heights */
+}
+
+.review-text strong {
+  font-weight: 700;
+  color: #111111;
+}
+
+.review-author {
+  font-size: 1.05rem;
+  color: #111111;
+  margin: 0;
+}
+
+/* --- Mobile & Tablet Responsiveness --- */
+@media (max-width: 900px) {
+  .review-cards-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+  
+  .review-card {
+    width: 100%;
+    max-width: 500px; /* Prevents cards from getting too wide on tablets */
+  }
+}
+/* --- Smart Financial Decision Section --- */
+.financial-section {
+  padding: 80px 20px;
+  background-color: #ffffff; /* Clean white background */
+  display: flex;
+  justify-content: center;
+}
+
+.financial-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1000px;
+  width: 100%;
+  gap: 50px;
+}
+
+/* --- Left Column: Text --- */
+.financial-text-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers the title, paragraph, and button */
+  text-align: center;
+}
+
+.financial-title {
+  font-size: 2.2rem;
+  color: #111111;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.financial-desc {
+  font-size: 0.95rem;
+  color: #444444;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.financial-desc strong {
+  color: #111111;
+  font-weight: 700;
+}
+
+/* Centered List Block with Left-Aligned Text */
+.financial-benefits {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 35px 0;
+  display: inline-block; /* Allows the entire block to be centered by the parent */
+  text-align: left; /* Keeps the text/bullets aligned neatly to the left inside the block */
+}
+
+.financial-benefits li {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+  color: #333333;
+}
+
+.financial-benefits li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 16px;
+  height: 16px;
+  /* Reusing the embedded Solid Red Circle Checkmark SVG */
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23c41e2a'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* Button Sizing */
+.financial-btn {
+  padding: 15px 60px;
+  font-size: 1.2rem;
+  width: auto;
+}
+
+/* --- Right Column: Image --- */
+.financial-image-col {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.financial-img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 2px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15); /* Adds a subtle shadow for polish */
+}
+
+/* --- Mobile & Tablet Responsiveness --- */
+@media (max-width: 850px) {
+  .financial-wrapper {
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  .financial-title {
+    font-size: 1.8rem;
+  }
+}
+/* --- Warning Signs Section --- */
+.warning-signs-section {
+  position: relative;
+  width: 100%;
+  padding: 80px 20px;
+  /* Replace with your background image of the damaged roof */
+  background-image: url('https://via.placeholder.com/1920x1080/222222/111111?text=Damaged+Roof+Background');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.warning-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Heavy dark overlay */
+  z-index: 1;
+}
+
+.warning-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 1000px;
+  width: 100%;
+}
+
+.warning-title {
+  color: #ffffff;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.warning-desc {
+  color: #dddddd;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  max-width: 850px;
+  margin-bottom: 40px;
+}
+
+.warning-desc strong {
+  color: #ffffff;
+}
+
+/* --- Flexbox Image Grid --- */
+.signs-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Centers the leftover items on the second row */
+  gap: 30px 20px; /* 30px vertical gap, 20px horizontal gap */
+  margin-bottom: 40px;
+  width: 100%;
+}
+
+.sign-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: calc(20% - 16px); /* Forces 5 items per row on desktop */
+  min-width: 130px; /* Prevents items from getting too tiny on resize */
+}
+
+.sign-item img {
+  width: 100%;
+  aspect-ratio: 4 / 3; /* Keeps all images uniformly shaped */
+  object-fit: cover;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.sign-label {
+  color: #ffffff;
+  font-size: 0.85rem;
+  line-height: 1.3;
+}
+
+/* Specific text color override for the dark background section */
+.warning-cta .cta-subtext {
+  color: #ffffff;
+  margin-top: 15px;
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 800px) {
+  .sign-item {
+    width: calc(33.333% - 14px); /* Switches to 3 columns per row on tablets */
+  }
+}
+
+@media (max-width: 500px) {
+  .warning-title {
+    font-size: 1.8rem;
+  }
+  
+  .sign-item {
+    width: calc(50% - 10px); /* Switches to 2 columns per row on small phones */
+  }
+}
+/* --- White Footer Section --- */
+.site-footer-white {
+  background-color: #ffffff;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-content {
+  max-width: 900px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-logo {
+  margin-bottom: 25px;
+}
+
+.footer-logo img {
+  max-height: 55px; /* Sized specifically to match the proportions in the design */
+  width: auto;
+}
+
+/* Base text styling for all footer paragraphs */
+.footer-text {
+  font-size: 0.75rem; /* Small legal font size */
+  color: #333333;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+/* Additional specific spacing for the dense license block */
+.footer-licenses {
+  margin-bottom: 35px;
+}
+
+.footer-copyright {
+  margin-bottom: 0;
+}
+
+/* Bottom Links */
+.footer-links {
+  display: block;
+  margin-top: 5px;
+}
+
+.footer-links a {
+  color: #333333;
+  text-decoration: underline;
+  margin: 0 4px;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: #c41e2a; /* Changes to the brand red on hover for a nice interactive feel */
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 768px) {
+  .footer-text {
+    font-size: 0.7rem;
+  }
+}
+body {
+    position: relative !important;
+    min-height: 100vh !important;
+}
+
+/* The Invisible Full-Page Overlay */
+.global-page-overlay {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    z-index: 500 !important; /* Sits above standard text backgrounds */
+    cursor: pointer !important;
+}
